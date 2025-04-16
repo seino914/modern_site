@@ -26,7 +26,7 @@ export default function Home() {
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="text-base" asChild>
-              <Link href="/contact">Get in Touch</Link>
+              <Link href="/contact">Contact Me</Link>
             </Button>
           </div>
         </div>

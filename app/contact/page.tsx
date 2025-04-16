@@ -5,14 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  MessageSquare,
-  Twitter,
-  BookOpen,
-} from "lucide-react";
+import { Github, Mail, Twitter, BookOpen } from "lucide-react";
 import Link from "next/link";
 
 export default function Contact() {
@@ -30,9 +23,7 @@ export default function Contact() {
       <section className="py-20 px-6 sm:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-              Get in Touch
-            </h1>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6">Contact Me</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Have a project in mind or just want to chat? Feel free to reach
               out!
@@ -118,11 +109,6 @@ export default function Contact() {
                       <Github className="h-5 w-5" />
                     </Link>
                   </Button>
-                  {/* <Button variant="outline" size="icon" asChild>
-                    <Link href="#" aria-label="LinkedIn">
-                      <Linkedin className="h-5 w-5" />
-                    </Link>
-                  </Button> */}
                   <Button variant="outline" size="icon" asChild>
                     <Link
                       href="https://x.com/seino914"
