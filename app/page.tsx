@@ -26,7 +26,7 @@ export default function Home() {
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="text-base" asChild>
-              <Link href="/contact">Get in Touch</Link>
+              <Link href="/contact">Contact Me</Link>
             </Button>
           </div>
         </div>
@@ -61,6 +61,9 @@ export default function Home() {
                 <Badge variant="secondary" className="px-3 py-1 text-sm">
                   TailwindCSS
                 </Badge>
+                <Badge variant="secondary" className="px-3 py-1 text-sm">
+                  Panda CSS
+                </Badge>
               </div>
             </Card>
 
@@ -89,22 +92,37 @@ export default function Home() {
 
             <Card className="p-8 hover:shadow-lg transition-all duration-300 border-2">
               <Sparkles className="h-12 w-12 text-primary mb-6" />
-              <h3 className="text-xl font-semibold mb-4">Modern Tech Stack</h3>
+              <h3 className="text-xl font-semibold mb-4">
+                Backend Technologies
+              </h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Leveraging cutting-edge technologies for optimal performance
+                Building robust and scalable backend systems with modern
+                technologies
               </p>
               <div className="flex flex-wrap gap-2.5">
                 <Badge variant="secondary" className="px-3 py-1 text-sm">
-                  GraphQL
+                  Node.js
                 </Badge>
                 <Badge variant="secondary" className="px-3 py-1 text-sm">
-                  Framer Motion
+                  Python
                 </Badge>
                 <Badge variant="secondary" className="px-3 py-1 text-sm">
-                  Jest
+                  FastAPI
                 </Badge>
                 <Badge variant="secondary" className="px-3 py-1 text-sm">
-                  CI/CD
+                  SQLAlchemy
+                </Badge>
+                <Badge variant="secondary" className="px-3 py-1 text-sm">
+                  PostgreSQL
+                </Badge>
+                <Badge variant="secondary" className="px-3 py-1 text-sm">
+                  MySQL
+                </Badge>
+                <Badge variant="secondary" className="px-3 py-1 text-sm">
+                  Prisma
+                </Badge>
+                <Badge variant="secondary" className="px-3 py-1 text-sm">
+                  Drizzle ORM
                 </Badge>
               </div>
             </Card>

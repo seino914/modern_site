@@ -1,6 +1,6 @@
-import { Badge } from "@/components/ui/badge"
-import { Card } from "@/components/ui/card"
-import { Heart, Coffee, Sparkles } from "lucide-react"
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
+import { Heart, Coffee, Sparkles } from "lucide-react";
 
 export default function About() {
   return (
@@ -25,10 +25,18 @@ export default function About() {
 
             <div className="prose prose-lg dark:prose-invert max-w-none mb-16">
               <p className="text-lg leading-relaxed mb-6">
-                With over 5 years of experience in frontend development and UI/UX design, I specialize in creating modern, responsive, and user-friendly web applications. My approach combines technical expertise with an eye for design, ensuring that every project not only functions flawlessly but also delivers an exceptional user experience.
+                With over 3 years of experience in frontend development and
+                UI/UX design, I specialize in creating modern, responsive, and
+                user-friendly web applications. My approach combines technical
+                expertise with an eye for design, ensuring that every project
+                not only functions flawlessly but also delivers an exceptional
+                user experience.
               </p>
               <p className="text-lg leading-relaxed">
-                I believe in the power of clean code, intuitive design, and continuous learning. When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.
+                I believe in the power of clean code, intuitive design, and
+                continuous learning. When I'm not coding, you'll find me
+                exploring new technologies, contributing to open-source
+                projects, or sharing knowledge with the developer community.
               </p>
             </div>
 
@@ -36,19 +44,25 @@ export default function About() {
               <Card className="p-6 text-center">
                 <Heart className="h-8 w-8 text-primary mx-auto mb-4" />
                 <h3 className="font-semibold mb-2">Passionate</h3>
-                <p className="text-muted-foreground">About creating exceptional user experiences</p>
+                <p className="text-muted-foreground">
+                  About creating exceptional user experiences
+                </p>
               </Card>
 
               <Card className="p-6 text-center">
                 <Coffee className="h-8 w-8 text-primary mx-auto mb-4" />
                 <h3 className="font-semibold mb-2">Dedicated</h3>
-                <p className="text-muted-foreground">To continuous learning and improvement</p>
+                <p className="text-muted-foreground">
+                  To continuous learning and improvement
+                </p>
               </Card>
 
               <Card className="p-6 text-center">
                 <Sparkles className="h-8 w-8 text-primary mx-auto mb-4" />
                 <h3 className="font-semibold mb-2">Creative</h3>
-                <p className="text-muted-foreground">In solving complex problems</p>
+                <p className="text-muted-foreground">
+                  In solving complex problems
+                </p>
               </Card>
             </div>
 
@@ -56,20 +70,50 @@ export default function About() {
               <h2 className="text-2xl font-semibold mb-6">Technical Skills</h2>
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-lg font-medium mb-3">Frontend Development</h3>
+                  <h3 className="text-lg font-medium mb-3">
+                    Frontend Development
+                  </h3>
                   <div className="flex flex-wrap gap-2">
-                    {["JavaScript", "TypeScript", "React", "Next.js", "Vue.js", "Tailwind CSS", "Sass"].map((skill) => (
-                      <Badge key={skill} variant="outline" className="px-3 py-1">
+                    {[
+                      "HTML",
+                      "CSS",
+                      "JavaScript",
+                      "TypeScript",
+                      "React",
+                      "Next.js",
+                      "Tailwind CSS",
+                      "Panda CSS",
+                    ].map((skill) => (
+                      <Badge
+                        key={skill}
+                        variant="outline"
+                        className="px-3 py-1"
+                      >
                         {skill}
                       </Badge>
                     ))}
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium mb-3">Design Tools</h3>
+                  <h3 className="text-lg font-medium mb-3">
+                    Backend Development
+                  </h3>
                   <div className="flex flex-wrap gap-2">
-                    {["Figma", "Adobe XD", "Sketch", "Photoshop", "Illustrator"].map((skill) => (
-                      <Badge key={skill} variant="outline" className="px-3 py-1">
+                    {[
+                      "Node.js",
+                      "Python",
+                      "FastAPI",
+                      "SQLAlchemy",
+                      "Prisma",
+                      "Drizzle ORM",
+                      "PostgreSQL",
+                      "MySQL",
+                    ].map((skill) => (
+                      <Badge
+                        key={skill}
+                        variant="outline"
+                        className="px-3 py-1"
+                      >
                         {skill}
                       </Badge>
                     ))}
@@ -78,8 +122,19 @@ export default function About() {
                 <div>
                   <h3 className="text-lg font-medium mb-3">Other Skills</h3>
                   <div className="flex flex-wrap gap-2">
-                    {["Git", "Jest", "Cypress", "Storybook", "Webpack", "GraphQL", "REST API"].map((skill) => (
-                      <Badge key={skill} variant="outline" className="px-3 py-1">
+                    {[
+                      "Git, Github, Gitlab",
+                      "Linux, Ubuntu",
+                      "VSCode, Cursor",
+                      "Figma",
+                      "Notion",
+                      "Slack",
+                    ].map((skill) => (
+                      <Badge
+                        key={skill}
+                        variant="outline"
+                        className="px-3 py-1"
+                      >
                         {skill}
                       </Badge>
                     ))}
@@ -91,5 +146,5 @@ export default function About() {
         </div>
       </section>
     </main>
-  )
+  );
 }
