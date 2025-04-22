@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
+import { getPageTranslation } from "@/lib/i18n/translations";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -9,7 +11,12 @@ import { Github, Mail, Twitter, BookOpen } from "lucide-react";
 import Link from "next/link";
 
 export default function Contact() {
+  const { language } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    document.title = getPageTranslation(language, "contact", "title");
+  }, [language]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,10 +30,11 @@ export default function Contact() {
       <section className="py-20 px-6 sm:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">Contact Me</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+              {getPageTranslation(language, "contact", "title")}
+            </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Have a project in mind or just want to chat? Feel free to reach
-              out!
+              {getPageTranslation(language, "contact", "description")}
             </p>
           </div>
 
@@ -39,7 +47,7 @@ export default function Contact() {
                       htmlFor="name"
                       className="block text-sm font-medium mb-2"
                     >
-                      Name
+                      {getPageTranslation(language, "contact", "name")}
                     </label>
                     <Input id="name" placeholder="Your name" required />
                   </div>
@@ -48,7 +56,7 @@ export default function Contact() {
                       htmlFor="email"
                       className="block text-sm font-medium mb-2"
                     >
-                      Email
+                      {getPageTranslation(language, "contact", "email")}
                     </label>
                     <Input
                       id="email"
@@ -62,7 +70,7 @@ export default function Contact() {
                       htmlFor="message"
                       className="block text-sm font-medium mb-2"
                     >
-                      Message
+                      {getPageTranslation(language, "contact", "message")}
                     </label>
                     <Textarea
                       id="message"
@@ -77,14 +85,18 @@ export default function Contact() {
                   className="w-full"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting
+                    ? getPageTranslation(language, "contact", "sending")
+                    : getPageTranslation(language, "contact", "send")}
                 </Button>
               </form>
             </Card>
 
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-semibold mb-4">Connect With Me</h2>
+                <h2 className="text-2xl font-semibold mb-4">
+                  {getPageTranslation(language, "contact", "connectWithMe")}
+                </h2>
                 <div className="space-y-4">
                   <Link
                     href="mailto:tonosaki914@gmail.com"
@@ -97,7 +109,9 @@ export default function Contact() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-semibold mb-4">Social Media</h2>
+                <h2 className="text-2xl font-semibold mb-4">
+                  {getPageTranslation(language, "contact", "socialMedia")}
+                </h2>
                 <div className="flex gap-4">
                   <Button variant="outline" size="icon" asChild>
                     <Link
@@ -133,8 +147,12 @@ export default function Contact() {
               </div>
 
               <Card className="p-6 bg-muted/50">
-                <h3 className="font-semibold mb-2">Office Hours</h3>
-                <p className="text-muted-foreground">8:00 AM - 10:00 PM</p>
+                <h3 className="font-semibold mb-2">
+                  {getPageTranslation(language, "contact", "officeHours")}
+                </h3>
+                <p className="text-muted-foreground">
+                  {getPageTranslation(language, "contact", "officeHoursTime")}
+                </p>
               </Card>
             </div>
           </div>
